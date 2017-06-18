@@ -1,0 +1,39 @@
+{
+  "name": "learn-promises",
+  "version": "0.1.0",
+  "description": "Some promises examples",
+  "main": "index.js",
+  "dependencies": {
+    "superagent": "^3.5.2"
+  },
+  "devDependencies": {
+    "babel-env": "^2.4.1",
+    "eslint": "^4.0.0",
+    "eslint-config-standard": "^10.2.1",
+    "eslint-plugin-import": "^2.3.0",
+    "eslint-plugin-node": "^5.0.0",
+    "eslint-plugin-promise": "^3.5.0",
+    "eslint-plugin-standard": "^3.0.1",
+    "jest": "^20.0.4",
+    "nock": "^9.0.13"
+  },
+  "scripts": {
+    "lint": "eslint --ignore-path .gitignore .",
+    "test": "jest",
+    "test:watch": "npm run test -- --watchAll"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gekorob/learn-promises.git"
+  },
+  "keywords": [
+    "promise",
+    "learn"
+  ],
+  "author": "Roberto Ciatti",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/gekorob/learn-promises/issues"
+  },
+  "homepage": "https://github.com/gekorob/learn-promises#readme"
+}
