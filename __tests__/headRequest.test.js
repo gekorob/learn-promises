@@ -1,6 +1,7 @@
 import nock from 'nock'
 
 import {callbackHeadRequest, promiseHeadRequest} from '../src/headRequest'
+import {timeout} from '../src/timeout'
 
 describe('test callback vs promise', () => {
   beforeEach(() => {
@@ -25,6 +26,14 @@ describe('test callback vs promise', () => {
 
   test('promise', () => {
     return promiseHeadRequest('http://nowhere.com').then(res => {
+      expect(res.header['x-count']).toEqual(40)
+    })
+  })
+
+  test('delay promise', () => {
+    jest.useFakeTimers()
+
+    return timeout(3000, promiseHeadRequest('http://nowhere.com')).then(res => {
       expect(res.header['x-count']).toEqual(40)
     })
   })
